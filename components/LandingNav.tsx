@@ -15,7 +15,7 @@ export default function LandingNav() {
         { name: "Team", url: "#team", icon: Users }
       ]}
       prefix={
-        <Link href="/">
+        <Link href="/" className="hidden lg:block">
           <Image src={"/logo.svg"} alt="logo" width={120} height={120} />
         </Link>
       }

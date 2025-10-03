@@ -167,12 +167,12 @@ export default function FeaturesCards() {
                   />
                 </div>
 
-                <div className="relative z-10 p-8 rounded-3xl h-full flex flex-col bg-black/80 border border-white/10 transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-2xl group-hover:bg-black/90 group-hover:border-white/20">
-                  <div className="mb-6 filter drop-shadow-lg transition-transform duration-300 group-hover:scale-110">{feature.icon}</div>
+                <div className="relative z-10 p-6 sm:p-8 rounded-3xl h-full flex flex-col bg-black/90 border border-white/20 transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-2xl group-hover:bg-black/95 group-hover:border-white/30 backdrop-blur-sm">
+                  <div className="mb-4 sm:mb-6 filter drop-shadow-lg transition-transform duration-300 group-hover:scale-110 flex-shrink-0">{feature.icon}</div>
 
-                  <h3 className="text-2xl font-bold mb-4 text-white transition-colors duration-300 group-hover:text-cyan-300">{feature.title}</h3>
+                  <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-white transition-colors duration-300 group-hover:text-cyan-300 break-words">{feature.title}</h3>
 
-                  <p className="leading-relaxed flex-grow text-gray-200 transition-colors duration-300 group-hover:text-gray-100">{feature.description}</p>
+                  <p className="text-sm sm:text-base leading-relaxed flex-grow text-gray-200 transition-colors duration-300 group-hover:text-gray-100 break-words overflow-hidden">{feature.description}</p>
                 </div>
               </div>
             )
