@@ -36,10 +36,10 @@ async function History() {
         return html.replace(/<[^>]*>/g, '');
     }
   return (
-    <div className='m-10 p-10 border border-purple-900 rounded-lg bg-black'>
-        <h2 className='font-bold text-3xl text-gray-200'>History</h2>
-        <p className='text-gray-400'>Search your previously generate AI content</p>
-        <div className='grid grid-cols-7 font-bold bg-purple-800 mt-5 py-3 px-3 rounded-md'>
+    <div className='m-2 sm:m-5 md:m-10 p-4 sm:p-6 md:p-10 border border-purple-900 rounded-lg bg-black'>
+        <h2 className='font-bold text-2xl sm:text-3xl text-gray-200'>History</h2>
+        <p className='text-sm sm:text-base text-gray-400'>Search your previously generate AI content</p>
+        <div className='hidden md:grid grid-cols-7 font-bold bg-purple-800 mt-5 py-3 px-3 rounded-md text-sm'>
             <h2 className='col-span-2 text-gray-200'>TEMPLATE</h2>
             <h2 className='col-span-2 text-gray-200'>AI RESP</h2>
             <h2 className='text-gray-200'>DATE</h2>
@@ -48,16 +48,16 @@ async function History() {
         </div>
         {HistoryList.map((item:HISTORY,index:number)=>(
             <React.Fragment key={index}>
-            <div className='grid grid-cols-7 my-5 py-3 px-3 hover:bg-slate-700 rounded-md transition-all'>
-            <h2 className='col-span-2 flex gap-2 items-center text-gray-200'>
+            <div className='grid grid-cols-1 md:grid-cols-7 my-5 py-3 px-3 hover:bg-slate-700 rounded-md transition-all gap-2 md:gap-0'>
+            <h2 className='md:col-span-2 flex gap-2 items-center text-gray-200 text-sm sm:text-base'>
                 <div className='w-6 h-6 flex items-center justify-center text-sm'>
                     {GetTemplateName(item?.templateSlug)?.icon}
                 </div>
                 {GetTemplateName(item.templateSlug)?.name}
             </h2>
-            <h2 className='col-span-2 line-clamp-3 mr-3 text-gray-300'>{stripHtmlTags(item?.aiResponse)}</h2>
-            <h2 className='text-gray-400'>{item.createdAt}</h2>
-            <h2 className='text-gray-400'>{item?.aiResponse.length}</h2>
+            <h2 className='md:col-span-2 line-clamp-2 md:line-clamp-3 mr-3 text-gray-300 text-sm'>{stripHtmlTags(item?.aiResponse)}</h2>
+            <h2 className='text-gray-400 text-xs sm:text-sm'><span className='md:hidden font-semibold'>Date: </span>{item.createdAt}</h2>
+            <h2 className='text-gray-400 text-xs sm:text-sm'><span className='md:hidden font-semibold'>Words: </span>{item?.aiResponse.length}</h2>
             <h2>
               <CopyButton aiResponse={item.aiResponse} />
             </h2>

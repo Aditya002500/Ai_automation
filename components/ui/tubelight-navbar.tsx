@@ -40,12 +40,12 @@ export function NavBar({ items, className, prefix, suffix }: NavBarProps) {
         className,
       )}
     >
-      <div className="flex items-center justify-between gap-3 w-[92vw] max-w-[1200px] bg-background/10 border border-purple-400 backdrop-blur-xl py-2 px-3 sm:px-4 rounded-full shadow-xl">
+      <div className="flex items-center justify-between gap-2 sm:gap-3 w-[95vw] sm:w-[92vw] max-w-[1200px] bg-background/10 border border-purple-400 backdrop-blur-xl py-2 px-2 sm:px-3 md:px-4 rounded-full shadow-xl">
         {/* Left: Logo / custom prefix */}
-        <div className="flex items-center min-w-[140px]">{prefix}</div>
+        <div className="flex items-center min-w-[80px] sm:min-w-[120px] md:min-w-[140px] shrink-0">{prefix}</div>
 
         {/* Middle: Nav items */}
-        <div className="flex items-center gap-1 sm:gap-2">
+        <div className="flex items-center gap-0.5 sm:gap-1 md:gap-2 overflow-x-auto scrollbar-hide">
         {items.map((item) => {
           const Icon = item.icon
           const isActive = activeTab === item.name
@@ -56,13 +56,13 @@ export function NavBar({ items, className, prefix, suffix }: NavBarProps) {
               href={item.url}
               onClick={() => setActiveTab(item.name)}
               className={cn(
-                "relative cursor-pointer text-sm sm:text-base font-semibold px-6 sm:px-7 py-2.5 sm:py-3 rounded-full transition-colors",
+                "relative cursor-pointer text-xs sm:text-sm md:text-base font-semibold px-3 sm:px-5 md:px-7 py-2 sm:py-2.5 md:py-3 rounded-full transition-colors whitespace-nowrap",
                 isActive ? "text-white bg-muted/80" : "text-foreground/80 hover:text-primary",
               )}
             >
-              <span className="hidden md:inline">{item.name}</span>
-              <span className="md:hidden">
-                <Icon size={18} strokeWidth={2.5} />
+              <span className="hidden sm:inline">{item.name}</span>
+              <span className="sm:hidden">
+                <Icon size={16} strokeWidth={2.5} />
               </span>
               {isActive && (
                 <motion.div
@@ -88,7 +88,7 @@ export function NavBar({ items, className, prefix, suffix }: NavBarProps) {
         </div>
 
         {/* Right: CTA / custom suffix */}
-        <div className="flex items-center min-w-[140px] justify-end">{suffix}</div>
+        <div className="flex items-center min-w-[80px] sm:min-w-[120px] md:min-w-[140px] justify-end shrink-0">{suffix}</div>
       </div>
     </div>
   )

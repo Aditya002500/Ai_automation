@@ -35,27 +35,32 @@ export default function DashboardTubelightNav({ onSearchInput }: DashboardTubeli
           </Link>
         }
         suffix={
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-2 sm:gap-4">
             {/* Search Bar */}
-            <div className="relative">
-              <div className="flex items-center gap-2 px-3 py-2 border border-white/20 rounded-full bg-white/5 hover:bg-white/10 transition-all duration-300 min-w-[200px] sm:min-w-[250px]">
+            <div className="relative hidden sm:block">
+              <div className="flex items-center gap-2 px-3 py-2 border border-white/20 rounded-full bg-white/5 hover:bg-white/10 transition-all duration-300 min-w-[150px] sm:min-w-[200px] md:min-w-[250px]">
                 <Search className="text-white/60 w-4 h-4 flex-shrink-0" />
                 <input
                   type="text"
-                  placeholder="Search templates..."
+                  placeholder="Search..."
                   onChange={(e) => onSearchInput && onSearchInput(e.target.value)}
                   className="outline-none bg-transparent text-white placeholder-white/50 w-full text-sm"
                 />
               </div>
             </div>
 
+            {/* Mobile Search Icon */}
+            <button className="sm:hidden p-2 border border-white/20 rounded-full bg-white/5 hover:bg-white/10 transition-all duration-300">
+              <Search className="text-white/60 w-4 h-4" />
+            </button>
+
             {/* User Avatar */}
             <div className="flex-shrink-0">
               <UserButton 
                 appearance={{
                   elements: {
-                    avatarBox: "w-10 h-10 border-2 border-purple-500/30 hover:border-purple-500/60 transition-all duration-300",
-                    userButtonAvatarBox: "w-10 h-10",
+                    avatarBox: "w-8 h-8 sm:w-10 sm:h-10 border-2 border-purple-500/30 hover:border-purple-500/60 transition-all duration-300",
+                    userButtonAvatarBox: "w-8 h-8 sm:w-10 sm:h-10",
                     userButtonPopoverCard: "bg-slate-800/95 backdrop-blur-md border-slate-600/50 rounded-xl",
                     userButtonPopoverMain: "bg-slate-800/95",
                     userButtonPopoverActionButton: "text-gray-200 hover:bg-purple-500/20 hover:text-white transition-all duration-300",

@@ -20,8 +20,9 @@ export default function LandingNav() {
         </Link>
       }
       suffix={
-        <Link href="/dashboard" className="inline-flex items-center gap-x-2 font-medium border border-white/10 text-white/90 hover:text-white py-2 px-4 rounded-full backdrop-blur-md bg-white/10 hover:bg-white/15 transition">
-          Get started
+        <Link href="/dashboard" className="inline-flex items-center gap-x-1 sm:gap-x-2 font-medium border border-white/10 text-white/90 hover:text-white py-1.5 sm:py-2 px-3 sm:px-4 rounded-full backdrop-blur-md bg-white/10 hover:bg-white/15 transition text-xs sm:text-sm whitespace-nowrap">
+          <span className="hidden xs:inline">Get started</span>
+          <span className="xs:hidden">Start</span>
         </Link>
       }
     />

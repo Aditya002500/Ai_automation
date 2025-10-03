@@ -104,10 +104,10 @@ export default function Home() {
         </div>
         
         {/* Content overlay positioned in front of background - positioned at bottom of hero */}
-        <div className="absolute bottom-0 left-0 right-0 z-32 pb-32 px-4 sm:px-6 lg:px-8">
+        <div className="absolute bottom-0 left-0 right-0 z-32 pb-16 sm:pb-24 md:pb-32 px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             {/* Get Started Button - positioned directly below the title */}
-            <div className="mb-3">
+            <div className="mb-2 sm:mb-3">
               <HoverButton href="/dashboard">
                 Get started
                 {/* <svg className="flex-shrink-0 size-4 ml-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6"/></svg> */}
@@ -115,8 +115,8 @@ export default function Home() {
             </div>
             
             {/* Descriptive paragraph - positioned below the button */}
-            <div className="max-w-3xl mx-auto">
-              <p className="text-lg text-white/90 drop-shadow-lg">
+            <div className="max-w-3xl mx-auto px-2">
+              <p className="text-sm sm:text-base md:text-lg text-white/90 drop-shadow-lg leading-relaxed">
                 Revolutionize your content creation with our AI-powered app, delivering engaging and high-quality text in seconds.
               </p>
             </div>
@@ -140,11 +140,11 @@ export default function Home() {
       <div 
         ref={(el) => { sectionRefs.current.templates = el; }}
         id="templates" 
-        className="relative bg-[#0a0a0f] max-w-[85rem] px-4 py-6 sm:px-6 lg:px-8 mx-auto rounded-3xl overflow-hidden border border-purple-500/20 z-10"
+        className="relative bg-[#0a0a0f] max-w-[85rem] px-4 py-4 sm:py-6 sm:px-6 lg:px-8 mx-auto rounded-3xl overflow-hidden border border-purple-500/20 z-10"
         style={getStackStyle('templates', 2)}
       >
         <div className="flex items-center justify-center">
-          <Link href="/dashboard" className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/10 hover:bg-white/15 backdrop-blur-md px-6 py-3 text-white transition">
+          <Link href="/dashboard" className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/10 hover:bg-white/15 backdrop-blur-md px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base text-white transition whitespace-nowrap">
             Explore Templates
           </Link>
         </div>
@@ -235,4 +235,3 @@ export default function Home() {
     </div>
   );
 }
-
