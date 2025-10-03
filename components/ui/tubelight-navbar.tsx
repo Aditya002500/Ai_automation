@@ -41,11 +41,11 @@ export function NavBar({ items, className, prefix, suffix }: NavBarProps) {
       )}
     >
       <div className="flex items-center justify-between gap-2 sm:gap-3 w-[95vw] sm:w-[92vw] max-w-[1200px] bg-background/10 border border-purple-400 backdrop-blur-xl py-2 px-2 sm:px-3 md:px-4 rounded-full shadow-xl">
-        {/* Left: Logo / custom prefix */}
-        <div className="flex items-center min-w-[80px] sm:min-w-[120px] md:min-w-[140px] shrink-0">{prefix}</div>
+        {/* Left: Logo / custom prefix - hide on smaller screens if empty */}
+        <div className="flex items-center min-w-0 lg:min-w-[140px] shrink-0">{prefix}</div>
 
-        {/* Middle: Nav items */}
-        <div className="flex items-center gap-0.5 sm:gap-1 md:gap-2 overflow-x-auto scrollbar-hide">
+        {/* Middle: Nav items - take more space when logo is hidden */}
+        <div className="flex items-center gap-1 sm:gap-2 md:gap-3 overflow-x-auto scrollbar-hide flex-1 justify-center lg:justify-start lg:flex-none">
         {items.map((item) => {
           const Icon = item.icon
           const isActive = activeTab === item.name
@@ -88,7 +88,7 @@ export function NavBar({ items, className, prefix, suffix }: NavBarProps) {
         </div>
 
         {/* Right: CTA / custom suffix */}
-        <div className="flex items-center min-w-[80px] sm:min-w-[120px] md:min-w-[140px] justify-end shrink-0">{suffix}</div>
+        <div className="flex items-center min-w-0 lg:min-w-[140px] justify-end shrink-0">{suffix}</div>
       </div>
     </div>
   )

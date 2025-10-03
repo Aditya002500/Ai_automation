@@ -167,12 +167,12 @@ export default function FeaturesCards() {
                   />
                 </div>
 
-                <div className="relative z-10 p-6 sm:p-8 rounded-3xl h-full flex flex-col bg-black/90 border border-white/20 transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-2xl group-hover:bg-black/95 group-hover:border-white/30 backdrop-blur-sm">
-                  <div className="mb-4 sm:mb-6 filter drop-shadow-lg transition-transform duration-300 group-hover:scale-110 flex-shrink-0">{feature.icon}</div>
+                <div className="relative z-10 p-6 sm:p-8 rounded-3xl h-full flex flex-col bg-white/95 border border-purple-300/50 transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-2xl group-hover:bg-white group-hover:border-purple-400 backdrop-blur-sm">
+                  <div className="mb-4 sm:mb-6 filter drop-shadow-lg transition-transform duration-300 group-hover:scale-110 flex-shrink-0 text-purple-600">{feature.icon}</div>
 
-                  <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-white transition-colors duration-300 group-hover:text-cyan-300 break-words">{feature.title}</h3>
+                  <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-gray-900 transition-colors duration-300 group-hover:text-purple-700 break-words">{feature.title}</h3>
 
-                  <p className="text-sm sm:text-base leading-relaxed flex-grow text-gray-200 transition-colors duration-300 group-hover:text-gray-100 break-words overflow-hidden">{feature.description}</p>
+                  <p className="text-sm sm:text-base leading-relaxed flex-grow text-gray-700 transition-colors duration-300 group-hover:text-gray-900 break-words overflow-hidden">{feature.description}</p>
                 </div>
               </div>
             )
