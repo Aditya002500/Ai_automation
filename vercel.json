@@ -1,0 +1,14 @@
+{
+  "buildCommand": "npm run build",
+  "framework": "nextjs",
+  "regions": ["iad1"],
+  "env": {
+    "NEXT_PUBLIC_DRIZZLE_DB_URL": "@drizzle-db-url",
+    "NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY": "@clerk-publishable-key",
+    "CLERK_SECRET_KEY": "@clerk-secret-key",
+    "GROQ_API_KEY": "@groq-api-key",
+    "NEXT_PUBLIC_GROQ_API_KEY": "@groq-api-key",
+    "LIVEBLOCKS_SECRET_KEY": "@liveblocks-secret-key",
+    "NEXT_PUBLIC_LIVEBLOCKS_PUBLIC_KEY": "@liveblocks-public-key"
+  }
+}
