@@ -68,7 +68,7 @@ export default function Home() {
     const isVisible = visibleSections.has(sectionId);
     const baseZIndex = 10 - index;
     const translateY = isVisible ? 0 : 30 + (index * 15); // Reduced movement distance
-    const opacity = isVisible ? 1 : 0.4; // Less dramatic opacity change
+    const opacity = 1; // Always full opacity - no dimming!
     const scale = isVisible ? 1 : 0.98; // Reduced scale change
 
     return {
