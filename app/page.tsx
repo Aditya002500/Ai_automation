@@ -81,7 +81,7 @@ export default function Home() {
 
   return (
     // Full-screen background with the geometric pattern extending across entire page
-    <div className="min-h-screen bg-[#0a0a0f] p-4 space-y-4">
+    <div className="min-h-screen bg-[#0a0a0f] p-4 space-y-8">
       {/* Header removed; Tubelight navbar handles logo and CTA */}
 
       {/* Tubelight Navbar (glass, rounded) */}

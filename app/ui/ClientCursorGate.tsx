@@ -7,8 +7,8 @@ const SplashCursor = dynamic(() => import("@/components/SplashCursor"), { ssr: f
 export default function ClientCursorGate() {
   const pathname = usePathname();
   
-  // Only disable on the main dashboard page, enable on all other pages including dashboard sub-pages
-  const disable = pathname === "/dashboard";
+  // Disable on main dashboard page and collaborative editor pages (content pages)
+  const disable = pathname === "/dashboard" || pathname.includes("/dashboard/content/");
   
   if (disable) return null;
   
