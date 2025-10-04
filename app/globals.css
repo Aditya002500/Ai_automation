@@ -12,8 +12,28 @@
     @apply overflow-x-hidden;
   }
   
+  html.lenis {
+    height: auto;
+  }
+  
   body {
     @apply overflow-x-hidden;
+  }
+  
+  html.lenis, html.lenis body {
+    overflow: hidden;
+  }
+  
+  /* Hide default scrollbar to prevent double scrollbar */
+  html::-webkit-scrollbar,
+  body::-webkit-scrollbar {
+    display: none;
+  }
+  
+  html,
+  body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 }
 

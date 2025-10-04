@@ -81,7 +81,7 @@ export default function Home() {
 
   return (
     // Full-screen background with the geometric pattern extending across entire page
-    <div className="min-h-screen bg-[#0a0a0f] p-4 space-y-8">
+    <div className="min-h-screen bg-[#0a0a0f] px-4 pt-4 pb-4 flex flex-col gap-8">
       {/* Header removed; Tubelight navbar handles logo and CTA */}
 
       {/* Tubelight Navbar (glass, rounded) */}
@@ -140,10 +140,10 @@ export default function Home() {
       <div 
         ref={(el) => { sectionRefs.current.templates = el; }}
         id="templates" 
-        className="relative bg-[#0a0a0f] max-w-[85rem] px-4 py-4 sm:py-6 sm:px-6 lg:px-8 mx-auto rounded-3xl overflow-hidden border border-purple-500/20 z-10"
+        className="relative bg-[#0a0a0f] rounded-3xl overflow-hidden border border-purple-500/20 z-10 py-6 sm:py-8"
         style={getStackStyle('templates', 2)}
       >
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-center px-4 sm:px-6 lg:px-8">
           <Link href="/dashboard" className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/10 hover:bg-white/15 backdrop-blur-md px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base text-white transition whitespace-nowrap">
             Explore Templates
           </Link>
@@ -225,7 +225,7 @@ export default function Home() {
       <div 
         ref={(el) => { sectionRefs.current.footer = el; }}
         id="footer" 
-        className="relative z-10"
+        className="relative z-10 mt-auto"
         style={getStackStyle('footer', 5)}
       >
         <Suspense fallback={<div className="flex items-center justify-center h-32"><Loader size="sm" /></div>}>

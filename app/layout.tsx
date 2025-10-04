@@ -4,6 +4,7 @@ import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import "@liveblocks/react-tiptap/styles.css";
 import ClientCursorGate from "./ui/ClientCursorGate";
+import SmoothScrollProvider from "@/components/SmoothScrollProvider";
 
 const inter = Outfit({ subsets: ["latin"] });
 
@@ -21,8 +22,10 @@ export default function RootLayout({
     <ClerkProvider>
     <html lang="en" className="dark">
       <body className={`${inter.className} bg-neutral-900 text-white min-h-screen`}>
-        <ClientCursorGate />
-        {children}
+        <SmoothScrollProvider>
+          <ClientCursorGate />
+          {children}
+        </SmoothScrollProvider>
       </body>
       
     </html>
